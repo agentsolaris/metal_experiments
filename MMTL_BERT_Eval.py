@@ -38,7 +38,7 @@ BATCH_SIZE = int(args.batch_size)
 DAILYDIALOGUE_DATA_PATH = args.dailydialogue_data_path
 EMOTIONLINES_DATA_PATH = args.emotionlines_data_path
 RESULTS_OUTPUT = args.results_output
-MODEL_NAME = args.mmtl_BERT_model
+MODEL_NAME = args.model_name
 NUM_EPOCHS = int(args.num_epochs)
 
 if not os.path.exists(RESULTS_OUTPUT):
