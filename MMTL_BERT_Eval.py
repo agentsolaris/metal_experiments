@@ -67,9 +67,9 @@ def create_full_BERT_input(folder_path, text_column_name, label_column_name, con
         
         def get_BERT_input_for_example(datum):
 
-            if not datum[2] in list(label_map.keys()):
+            if not datum[headers.index(label_column_name)] in list(label_map.keys()):
                 # We need to add one to this as MeTaL does not accept 0 as a valid label
-                label_map[datum[2]] = len(list(label_map.values())) + 1
+                label_map[datum[headers.index(label_column_name)]] = len(list(label_map.values())) + 1
 
             # We tokenize our initial data
             tokens_a = tokenizer.tokenize(datum[headers.index(text_column_name)])
