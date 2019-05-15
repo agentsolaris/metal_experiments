@@ -236,6 +236,7 @@ for i in range(NUM_EPOCHS):
         log_every=1,
         progress_bar=False,
     )
+    print("Epoch number {0} scores:".format(i))
     print(scores)
 
 filename = OUTPUT_PATH + '/'+MODEL_NAME+'.out'
