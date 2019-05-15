@@ -234,7 +234,7 @@ for i in range(NUM_EPOCHS):
         payloads, 
         n_epochs=1, 
         log_every=1,
-        progress_bar=True,
+        progress_bar=False,
     )
     print(scores)
 
