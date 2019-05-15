@@ -233,7 +233,7 @@ scores = trainer.train_model(
     payloads, 
     n_epochs=NUM_EPOCHS, 
     log_every=1,
-    progress_bar=True,
+    progress_bar=False,
 )
 
 filename = OUTPUT_PATH + '/'+MODEL_NAME+'.out'
