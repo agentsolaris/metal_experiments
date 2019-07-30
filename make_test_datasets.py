@@ -24,7 +24,7 @@ if not os.path.exists(truncated_data_dir):
     os.makedirs(truncated_data_dir)
 
 for data_type in ["train", "dev", "test"]:
-    original_data = pd.read_csv(os.path.join(original_data_dir, data_type+".tsv"), sep="\t")
+    original_data = pd.read_csv(os.path.join(original_data_dir, data_type+".tsv"), sep="\t", error_bad_lines=False)
     
     binaried_df = original_data.loc[original_data.emotion.isin(binary_emotions),]
     binaried_df.to_csv(os.path.join(binaried_data_dir, data_type+".tsv"), sep='\t', encoding="utf-8")
