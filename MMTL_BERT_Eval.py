@@ -46,8 +46,8 @@ if not os.path.exists(RESULTS_OUTPUT):
 
 def read_tsv(input_file, quotechar=None):
     """Reads a tab separated value file."""
-    with open(input_file, "r", encoding="utf-8", error_bad_lines=False) as f:
-        reader = csv.reader(f, delimiter="\t", quotechar=quotechar)
+    with open(input_file, "r", encoding="utf-8") as f:
+        reader = csv.reader(f, delimiter="\t", quotechar=quotechar, error_bad_lines=False)
         lines = []
         for line in reader:
             if sys.version_info[0] == 2:
