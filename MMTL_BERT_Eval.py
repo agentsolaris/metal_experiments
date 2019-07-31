@@ -140,14 +140,14 @@ database_tasks = {
         path = DAILYDIALOGUE_DATA_PATH,
         batch_size = BATCH_SIZE,
         text_column_name = "dialogue",
-        label_column_name = "emotion",
+        label_column_name = "String#1",
         context_column_name = "context",
     ),
     "friendscontext": InputTask(
         path = EMOTIONLINES_DATA_PATH,
         batch_size = BATCH_SIZE,
         text_column_name = "utterance",
-        label_column_name = "emotion",
+        label_column_name = "String#2",
         context_column_name = "context",
     ),
 }
